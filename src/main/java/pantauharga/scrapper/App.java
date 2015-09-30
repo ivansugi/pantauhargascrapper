@@ -208,6 +208,7 @@ public class App {
 	public static void main(String[] args) {
 
 		try {
+			System.out.println((new Date()).toString() + " Starting scrapper..");
 			App scrapper = new App(args[0]);
 			String url = String.format("http://aplikasi.pertanian.go.id/smshargakab/%1$s.asp?selrepo=%1$s&seltgl=%2$td&selbul=%2$tm&seltah=%2$ty", args[1], Calendar.getInstance());
 			System.out.println(url);
@@ -255,7 +256,7 @@ public class App {
 			}
 
 			scrapper.close();
-			System.out.println("Bye.");
+			System.out.println((new Date()).toString() + " Bye.");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
