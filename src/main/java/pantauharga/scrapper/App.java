@@ -154,7 +154,7 @@ public class App {
 		Date now = new Date();
 		try {
 			pstmt = this.connection.prepareStatement("insert into comodity_input values("
-					+ "(select max(id)+1 from comodity_input),"
+					+ "(select nextval('hibernate_sequence')),"
 					+ "0,"
 					+ "0,"
 					+ "?," // comodity id
